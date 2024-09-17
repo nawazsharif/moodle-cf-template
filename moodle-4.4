@@ -105,7 +105,7 @@ sudo systemctl restart php-fpm
 sudo git clone -b MOODLE_404_STABLE https://github.com/moodle/moodle.git /usr/share/nginx/html/moodle
 
 # Configure Moodle
-cat << EOF > /usr/share/nginx/html/moodle/config.php
+sudo tee /usr/share/nginx/html/moodle/config.php > /dev/null << EOF
 <?php  // Moodle configuration file
 unset(\$CFG);
 global \$CFG;
